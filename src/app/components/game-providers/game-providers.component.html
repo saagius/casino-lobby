@@ -1,0 +1,12 @@
+<div id="providers-component">
+  <div class="providers-wrapper">
+    <select class='select-option'
+        [(ngModel)]="selectedProvider"
+        (change)='onOptionSelected()'>
+      <option class='option'>All providers</option>
+      <option class='option' 
+        *ngFor='let provider of providers' 
+        [ngValue]="provider">{{provider.title}}</option>
+    </select>
+  </div>
+</div>

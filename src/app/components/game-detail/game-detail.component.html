@@ -1,0 +1,30 @@
+<div *ngIf="game" class="detail-component" [ngStyle]="{background: 'url(' + game.background + ')'}">
+  <h2>{{game.name | uppercase}}</h2>
+  <div class="icons-wrapper" *ngIf="game.icon_2 || game.icon_3">
+    <div class="icon-label">Icons</div>
+    <div class="icons">
+      <div class="icon-2" *ngIf="game.icon_2">
+        <div>icon_2</div>
+        <img defaultImage="assets/united_remote.jpg" [lazyLoad]="game.icon_2" />
+      </div>
+      <div class="icon-3" *ngIf="game.icon_3">
+        <div>icon_3</div>
+        <img defaultImage="assets/united_remote.jpg" [lazyLoad]="game.icon_3" />
+      </div>
+    </div>
+  </div>
+  <div class="information-wrapper">
+    <div class="item-wrapper" *ngFor="let item of sortedItems" [ngClass]="item">
+      <div class="item" *ngIf="items[item].list && game[item].length || !items[item].list && game[item]">
+        <label>{{items[item].label}}</label>
+        <div *ngIf="!items[item].list">
+          {{game[item]}}
+        </div>
+        <div *ngIf="items[item].list && game[item].length">
+          <div *ngFor='let list of game[item]'>{{list.title}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>

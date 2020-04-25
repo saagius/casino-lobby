@@ -1,0 +1,15 @@
+<div class="search-and-filters">
+  <app-game-search></app-game-search>
+  <app-game-categories></app-game-categories>
+  <app-game-providers></app-game-providers>
+</div>
+<h2>Games</h2>
+<div class="grid grid-pad">
+  <a *ngFor="let game of games"
+      routerLink="/game/{{game.id}}">
+      <div class="module game">
+        <h4>{{game.name}}</h4>
+        <img defaultImage="assets/united_remote.jpg" [lazyLoad]="game.icon_2" />
+      </div>
+  </a>
+</div>

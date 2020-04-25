@@ -1,0 +1,12 @@
+<div id="search-component">
+  <div class="search-wrapper">
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" placeholder="Search game" autocomplete="off" />
+    <ul class="search-result">
+      <li *ngFor="let game of games$ | async" >
+        <a routerLink="/game/{{game.id}}">
+          {{game.name}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div id="categories-component">
+  <div class="category-wrapper">
+    <select class='select-option'
+        [(ngModel)]="selectedCategory"
+        (change)='onOptionSelected()'>
+      <option class='option'>All categories</option>
+      <option class='option' 
+        *ngFor='let category of categories' 
+        [ngValue]="category">{{category.title}}</option>
+    </select>
+  </div>
+</div>

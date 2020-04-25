@@ -1,0 +1,79 @@
+/* GamesComponent's private CSS styles */
+.search-and-filters {
+  display: flex;
+  margin-top: 20px;
+}
+.search-and-filters > *:not(:first-child) {
+  margin-left: 10px;
+}
+h2 {
+  margin-bottom: 0;
+}
+h4 {
+  background: #ffffff99;
+  color: #1F1055;
+  padding: 5px 10px;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  padding-bottom: 20px;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.grid {
+  margin: 0;
+}
+
+.module {
+  text-align: center;
+  color: #eee;
+  width: 220px;
+  background-color: #3f525c;
+  border-radius: 2px;
+  margin: auto;
+}
+.module:hover {
+  background-color: #EEE;
+  cursor: pointer;
+  color: #607d8b;
+}
+.module img {
+  display: block;
+}
+.module:hover img {
+  opacity: 0.9;
+}
+.grid-pad {
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .search-and-filters {
+    flex-direction: column;
+  }
+  .search-and-filters > *:not(:first-child) {
+    padding-top: 10px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 600px) {
+  .module {
+    font-size: 10px;
+    max-height: 75px; }
+}
+@media (max-width: 1024px) {
+  .grid {
+    margin: 0;
+  }
+  .module {
+    min-width: 60px;
+  }
+}

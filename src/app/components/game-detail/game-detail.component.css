@@ -1,0 +1,102 @@
+/* GameDetailComponent's private CSS styles */
+.detail-component {
+  margin-top: 20px;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+h2 {
+  margin-top: 0;
+  padding: 5px;
+  background: #00000099;
+  color: white;
+}
+.icon-label {
+  padding: 5px;
+  background: #00000099;
+  color: white;
+  margin-bottom: 10px;
+}
+.icons {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.85;
+}
+.icons img {
+  border: 1px solid #eee;
+}
+.icons > * {
+  margin: 0 20px;
+  position: relative;
+}
+.icons > * > div {
+  position: absolute;
+  background: #00000099;
+  color: white;
+  width: calc(100% - 10px);
+  padding: 0 5px;
+  top: 1px;
+  left: 1px;
+}
+.icon-2 {
+  height: 155px;
+}
+.icon-2 div {
+  max-width: 210px;
+}
+.icon-2 img {
+  max-width: 220px;
+  display: block;
+}
+.icon-3 div {
+  max-width: 390px;
+}
+.icon-3 img {
+  max-width: 400px;
+  display: block;
+}
+.information-wrapper {
+  display: flex;
+  background: #00000099;
+  flex-direction: column;
+  margin-top: 10px;
+  padding: 10px;
+  color: white;
+}
+.information-wrapper .item-wrapper:not(:first-child):not(:empty) {
+  padding-top: 5px;
+}
+.information-wrapper .item {
+  display: flex;
+}
+.information-wrapper .item label {
+  width: 150px;
+}
+button {
+  margin: 10px;
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 0;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+@media (max-width: 768px) {
+  .icons {
+    flex-direction: column;
+  }
+  .icons > *:not(:first-child) {
+    margin-top: 10px;
+  }
+
+  .icons img {
+    width: 100%;
+  }
+}
